@@ -17,6 +17,14 @@ Communicate with peers and mentors through a secure messaging system.
 
 ## Installation
 ### Prerequisites
+Ensure the following are installed on your system:
+
+-**Python 3.8+**
+-**MYSQL Server**
+-**A virtual environment manager**
+
+Python dependencies (included in requirements.txt):
+
 authlib ~= 1.2
 django ~= 4.2
 python-dotenv ~= 1.0
@@ -28,15 +36,13 @@ daphne ~= 4.1
 
 ```sh
 git clone https://github.com/NadiaTeta/YouthTalent.git
-```
-```sh
 cd YouthTalent
 ```
 
 2. Create a Virtual Environment:
 
 ```sh
-python3 -m venv venv
+python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 ```
 
@@ -45,39 +51,48 @@ source venv/bin/activate   # On Windows: venv\Scripts\activate
 ```sh
 pip install -r requirements.txt
 ```
-4. Start MySql
+4. Start MYSQL Server
 
 ```sh
 sudo systemctl start mysql
-```
-```sh
 sudo mysql -u root -p
+```
+5. Create a Database
+After logging into MYSQL:
+   
+```sh
 CREATE DATABASE youthcreativity;
 exit;
 ```
+6. Update Database Settings
+Open settings.py in your Django project and update the DATABASES configuration:
 
-5. Make Migration
+```sh
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'youthcreativity',
+        'USER': 'your_mysql_user',
+        'PASSWORD': 'your_mysql_password',
+        'HOST': 'localhost',
+    }
+}
+```
+
+7. Run Database Migration
 
 ```sh
 python manage.py makemigrations
-```
-
-6. Set Up the Database:
-
-Configure the database settings in settings.py.
-Run migrations:
-
-```sh
 python manage.py migrate
 ```
 
-7. Run the Development Server:
+8. Run the Development Server:
 
 ```
 python manage.py runserver
 ```
 
-8. Access the Application:
+9. Access the Application:
 Open your browser and navigate to http://localhost:8000.
 
 ## Folder Structure
@@ -109,9 +124,18 @@ youth-creativity-hub/
 We welcome contributions! Follow these steps to contribute:
 
 1. Fork the repository.
-2. Create a feature branch: "git checkout -b feature-name".
-3. Commit changes: "git commit -m "Add feature""
-4. Push to your branch: "git push origin feature-name".
+2. Create a feature branch:
+```sh
+   git checkout -b feature-name
+```
+3. Commit changes:
+```sh
+   git commit -m "Add feature"
+```
+4. Push to your branch:
+```sh
+   git push origin feature-name
+```
 5. Submit a pull request.
  
 ## License
@@ -120,4 +144,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Contact
 For queries or suggestions, please reach out to:
 Email: support@youthcreativityhub.com
-GitHub: Youth Creativity Hub
+GitHub: YouthTalent
