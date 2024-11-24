@@ -29,6 +29,9 @@ daphne ~= 4.1
 ```sh
 git clone https://github.com/NadiaTeta/YouthTalent.git
 ```
+```sh
+cd YouthTalent
+```
 
 2. Create a Virtual Environment:
 
@@ -42,7 +45,25 @@ source venv/bin/activate   # On Windows: venv\Scripts\activate
 ```sh
 pip install -r requirements.txt
 ```
-4. Make Migration
+4. Start MySql
+
+```sh
+sudo systemctl start mysql
+```
+```sh
+sudo mysql -u root -p
+```
+```sh
+create DATABASE
+```
+```sh
+youthcreativity
+```
+```sh
+exit
+```
+
+5. Make Migration
 
 ```sh
 python manage.py makemigrations
@@ -57,13 +78,13 @@ Run migrations:
 python manage.py migrate
 ```
 
-6. Run the Development Server:
+7. Run the Development Server:
 
 ```
 python manage.py runserver
 ```
 
-7. Access the Application:
+8. Access the Application:
 Open your browser and navigate to http://localhost:8000.
 
 ## Folder Structure
