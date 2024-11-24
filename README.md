@@ -36,7 +36,7 @@ cd YouthTalent
 2. Create a Virtual Environment:
 
 ```sh
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 ```
 
@@ -52,15 +52,8 @@ sudo systemctl start mysql
 ```
 ```sh
 sudo mysql -u root -p
-```
-```sh
-create DATABASE
-```
-```sh
-youthcreativity
-```
-```sh
-exit
+CREATE DATABASE youthcreativity;
+exit;
 ```
 
 5. Make Migration
