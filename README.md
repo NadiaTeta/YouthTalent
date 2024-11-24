@@ -19,9 +19,9 @@ Communicate with peers and mentors through a secure messaging system.
 ### Prerequisites
 Ensure the following are installed on your system:
 
--**Python 3.8+**
--**MYSQL Server**
--**A virtual environment manager**
+- **Python 3.8+**
+- **MYSQL Server**
+- **A virtual environment manager**
 
 Python dependencies (included in requirements.txt):
 
