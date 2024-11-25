@@ -163,5 +163,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Contact
 For queries or suggestions, please reach out to:
-Email: support@youthcreativityhub.com
+Email: n.teta2@alustudent.com
 GitHub: YouthTalent
