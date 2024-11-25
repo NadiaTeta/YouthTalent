@@ -97,26 +97,42 @@ Open your browser and navigate to http://localhost:8000.
 
 ## Folder Structure
 ```sh
-├── assets/        # Contains additional assets like fonts or external libraries.
-├── chat/          # Django app for chat functionality.
-├── core/          # Django app for core functionalities (e.g., posts, events).
-├── media/         # Stores user-uploaded files (e.g., profile pictures, creative works).
-├── static/        # Stores static files like CSS, JavaScript, and images.
-├── templates/     # Contains HTML templates for the Django views.
-├── users/         # Django app for user authentication and profiles.
-├── .env           # Environment variables (e.g., database credentials).
-├── README.md      # Project documentation.
-├── db.sqlite3     # SQLite database file (used for development/testing).
-├── manage.py      # Django’s command-line utility for administrative tasks.
-├── requirements.txt  # List of project dependencies.
-└── response.json())
+YouthTalent/
+├── YouthCreativity/       # Main project directory with core configurations
+│   ├── __init__.py
+│   ├── asgi.py            # ASGI application for WebSocket support
+│   ├── settings.py        # Project settings
+│   ├── urls.py            # Root URL configuration
+│   ├── wsgi.py            # WSGI application
+├── assets/                # Static resources for admin and other UI components
+├── chat/                  # Chat and messaging app
+│   ├── consumers.py       # WebSocket handlers
+│   ├── models.py          # Chat-related models
+│   ├── routing.py         # WebSocket routing
+│   ├── urls.py            # URL routing for chat
+│   ├── views.py           # Views for messaging
+├── core/                  # App for posts and collaborations
+│   ├── models.py          # Models for posts, comments, and saved items
+│   ├── views.py           # Views for handling posts and user interactions
+│   ├── urls.py            # URL configuration for core functionality
+├── users/                 # User management app
+│   ├── models.py          # Custom user and profile models
+│   ├── views.py           # Views for user registration and profiles
+│   ├── urls.py            # URL configuration for user management
+├── media/                 # User-uploaded content
+│   ├── uploads/
+│       ├── pfp/           # Profile pictures
+│       ├── post_media/    # Media files for posts
+├── static/                # Static files (CSS, JS, etc.)
+├── templates/             # HTML templates for the app
+│   ├── home.html          # Homepage
+│   ├── profile.html       # User profile page
+│   ├── post.html          # Post detail page
+├── .env                   # Environment variables file
+├── manage.py              # Django management script
+├── requirements.txt       # Python dependencies
+└── db.sqlite3             # SQLite database file
 ```
-- **core/: Handles posts, events, and collaboration tools.**
-- **users/: Manages user registration, authentication, and profiles.**
-- **chat/: Implements direct messaging and mentorship chat functionalities.**
-- **templates/: HTML templates for views.**
-- **static/: Static assets like CSS, JS, and images.**
-- **media/: User-uploaded files (e.g., profile pictures, creative works).**
    
 ## Technologies Used
 1. Backend: Django (Python)
