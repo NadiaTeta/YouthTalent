@@ -97,15 +97,19 @@ Open your browser and navigate to http://localhost:8000.
 
 ## Folder Structure
 ```sh
-youth-creativity-hub/
-├── core/
-├── users/
-├── chat/
-├── templates/
-├── static/
-├── media/
-├── manage.py
-└── requirements.txt
+├── assets/        # Contains additional assets like fonts or external libraries.
+├── chat/          # Django app for chat functionality.
+├── core/          # Django app for core functionalities (e.g., posts, events).
+├── media/         # Stores user-uploaded files (e.g., profile pictures, creative works).
+├── static/        # Stores static files like CSS, JavaScript, and images.
+├── templates/     # Contains HTML templates for the Django views.
+├── users/         # Django app for user authentication and profiles.
+├── .env           # Environment variables (e.g., database credentials).
+├── README.md      # Project documentation.
+├── db.sqlite3     # SQLite database file (used for development/testing).
+├── manage.py      # Django’s command-line utility for administrative tasks.
+├── requirements.txt  # List of project dependencies.
+└── response.json())
 ```
 - **core/: Handles posts, events, and collaboration tools.**
 - **users/: Manages user registration, authentication, and profiles.**
